@@ -1,0 +1,301 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+}
+* {
+    box-sizing: border-box;  
+}
+.diagram {
+    min-height: 300px;
+}
+.palette-div {
+    border-left: 1px solid #e5ebec;
+}
+.diagram-div {
+    width: 80%;
+}
+.graph {
+    min-height: 300px;
+    padding: 5px 10px;
+    border-bottom: 1px solid #e5ebec;
+    margin-bottom: 5px;
+    position: relative;
+}
+.gp-obj {
+    display: inline-grid;
+    position: absolute;
+    z-index: 9;
+}
+.gp-box {
+    display: table;
+    /* padding: 7px 20px; */
+    /* border: 1px solid grey; */
+    cursor: pointer;
+    max-width: 200px;
+    margin: 0 auto;
+    /* background: white; */
+}
+.gp-path {
+    height: 40px;
+    width: 100px;
+    background-repeat: no-repeat;
+    background-size: 200px 160px;
+    background-image: url('imgs/arrow.png');
+    margin: 0 auto;
+}
+.gp-add-available {
+    cursor: pointer;
+    background-position: 0 0;
+}
+.gp-add-available:hover {
+    background-position: 0 -40px;
+}
+.gp-path-down {
+    margin: 0 auto;
+}
+.gp-path-right{
+    position: absolute;
+    right: -50px;
+}
+.gp-down .gp-path-down {
+    cursor: inherit;
+    border: none;
+    background-position: 0 -80px;
+}
+.gp-right .gp-path-right {
+    cursor: inherit;
+    border: none;
+    background-position: 0 -120px;
+}
+.gp-condition .gp-path-down {
+    background-position: -100px -80px;
+}
+.gp-condition .gp-path-right {
+    background-position: -100px -120px;
+}
+.gp-condition .gp-path-down.gp-add-available {
+    background-position: 0 0;
+}
+.gp-condition .gp-path-right.gp-add-available {
+    background-position: 0 0;
+}
+.gp-condition .gp-path-down.gp-add-available:hover {
+    /* background-position: -100px 0; */
+    background-position: 0 -40px;
+}
+.gp-condition .gp-path-right.gp-add-available:hover {
+    background-position: -100px -40px;
+}
+.gp-start .gp-box {
+    border-radius: 40px;
+}
+.gp-message .gp-box {
+    border-radius: 5px;
+}
+.gp-condition .gp-box {
+    border-radius: 40%;
+}
+.gp-delete-btn {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-size: 25px;
+}
+.modal-dialog-centered {
+    margin-top: 100px;
+}
+.modal-title {
+    float: left;
+}
+.egp-title-outer {
+    margin-right: 80px;
+}
+.form-minline .form-group {
+    display: block;
+    margin-bottom: 25px;
+}
+.form-minline label {
+    display: inline-block;
+    width: 20%;
+}
+.form-minline input, .form-minline select {
+    display: inline-block;
+    width: 77%;
+}
+.form-minline .egp-delay-label {
+    width: 50%;
+}
+.form-minline .egp-delay {
+    width: 22%;
+}
+.form-minline .egp-delay-value {
+    width: 22%;
+}
+.egp-show-start .egp-show-start {
+    display: block !important;
+}
+.egp-show-message .egp-show-message {
+    display: block !important;
+}
+.egp-show-condition .egp-show-condition {
+    display: block !important;
+}
+.egp-show-webhook .egp-show-webhook {
+    display: block !important;
+}
+.egp-show-response .egp-show-response {
+    display: block !important;
+}
+.gp-line {
+    background: url('imgs/path.png');
+    background-size: contain;
+    height: 7px;
+}
+.gp-line .path-tri {
+    position: absolute;
+    left: 20px;
+    display: none;
+}
+.gp-line .path-tri::before {
+    content: "\25bc";
+    transform: rotate(90deg);
+    position: absolute;
+    top: -9.5px;
+    color: black;
+}
+.gp-line .path-str span {
+    background: white;
+    padding: 0 3px;
+    font-family: monospace;
+    font-weight: bold;
+}
+#egp_object_type {
+    width: 150px;
+    float: left;
+}
+#egp_path_str {
+    width: auto;
+    float: left;
+    margin-left: 10px;
+}
+
+.gp-box-icon {
+    position: absolute;
+    left: calc(50% - 22px);
+    top: -24px;
+    z-index: 9;
+    border-radius: 25px;
+    background: white;
+    text-align: center;
+    padding: 10px;
+    margin: 5px;
+    line-height: 0;
+    font-size: 16px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.gp-box-icon.gp-abs {
+    background: linear-gradient(to right, #f79f00, #ffee90);
+    margin: 0;
+    padding: 15px;
+    z-index: 3;
+}
+.gp-box-context {
+    padding: 20px 20px 10px;
+    min-width: 100px;
+    text-align: center;
+}
+.gp-box-context.gp-abs {
+    position: absolute;
+    left: 0;
+    border-radius: 15px;
+    top: 0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    background: white;
+    z-index: 8;
+}
+.gp-box-back {
+    content: "";
+    width: 100%;
+    background: linear-gradient(to right, #f79f00, #ffee90);
+    height: 40px;
+    position: absolute;
+    left: 0;
+    z-index: 4;
+    bottom: 33px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+.gp-box-title {
+    font-size: 14px;
+    font-weight: 600;
+    color: black;
+    font-family: sans-serif;
+}
+.gp-box-content {
+    font-size: 10px;
+    font-family: sans-serif;
+    padding-top: 2px;
+}
+
+/* for condition object css */
+.gp-condition .gp-box-icon.gp-abs {
+    background: linear-gradient(to right, #004dc1, #70c8f5);
+}
+.gp-condition .gp-box-back {
+    background: linear-gradient(to right, #004dc1, #70c8f5);
+}
+
+/* for response object css */
+.gp-response .gp-box-icon.gp-abs {
+    background: linear-gradient(to right, #8900c1, #ce70f5);
+}
+.gp-response .gp-box-back {
+    background: linear-gradient(to right, #8900c1, #ce70f5);
+}
+
+/* for message object css */
+.gp-message .gp-box-icon {
+    left: -26px;
+    font-size: 19px;
+    top: calc(50% - 48px);
+    background: linear-gradient(to right, #01a00e, #5ff7a5);
+    padding: 14px;
+    color: white;
+}
+.gp-message .gp-box-icon.gp-abs {
+    display: none;
+}
+.gp-message .gp-box-context {
+    padding: 6px 20px 6px 40px;
+}
+.gp-message .gp-box-back {
+    background: linear-gradient(to right, #01a00e, #5ff7a5);
+    top: 0;
+    right: -8px;
+    left: unset;
+    width: 40px;
+    height: calc(100% - 40px);
+}
+
+/* for webhook object css */
+.gp-webhook .gp-box-icon {
+    left: -26px;
+    font-size: 19px;
+    top: calc(50% - 48px);
+    background: linear-gradient(to right, #821a1a, #f17777);
+    padding: 14px;
+    color: white;
+}
+.gp-webhook .gp-box-icon.gp-abs {
+    display: none;
+}
+.gp-webhook .gp-box-context {
+    padding: 6px 20px 6px 40px;
+}
+.gp-webhook .gp-box-back {
+    background: linear-gradient(to right, #821a1a, #f17777);
+    top: 0;
+    right: -8px;
+    left: unset;
+    width: 40px;
+    height: calc(100% - 40px);
+}
