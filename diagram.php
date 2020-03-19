@@ -287,7 +287,7 @@
     }
     function loadDiagram() {
       $.ajax({
-        url: "diagram_ajax_new.php",
+        url: "ajax.php",
         type: "post",
         data: {
             "mode": "load",
@@ -311,7 +311,7 @@
     }
     function saveDiagram() {
       $.ajax({
-        url: "diagram_ajax_new.php",
+        url: "ajax.php",
         type: "post",
         data: {
             "mode": "save",
