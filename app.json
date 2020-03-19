@@ -1,0 +1,22 @@
+{
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ],
+  "description": "Fancy diagram for mailchimp or chatbot",
+  "env": {
+  },
+  "formation": {
+    "web": {
+      "quantity": 1
+    }
+  },
+  "name": "mailchimp_diagram",
+  "scripts": {
+  },
+  "stack": "heroku-18"
+}

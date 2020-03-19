@@ -6,7 +6,7 @@
 # https://github.com/sequelpro/sequelpro
 #
 # Host: 127.0.0.1 (MySQL 5.7.25)
-# Database: gojs_db
+# Database: diagram_db
 # Generation Time: 2019-09-04 06:41:09 +0000
 # ************************************************************
 
