@@ -7,15 +7,15 @@
 	<meta name="description" content="Interactive flowchart diagram implemented by GoJS in JavaScript for HTML." />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Copyright 1998-2019 by Northwoods Software Corporation. -->
-	<link rel="stylesheet" href="https://sendplex.net/client/views/sp/assets/bootstrap/dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="https://sendplex.net/client/views/sp/assets/css/style.css">
+	<link rel="stylesheet" href="https://sendsms.net/client/views/sp/assets/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://sendsms.net/client/views/sp/assets/css/style.css">
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.9.0/css/all.css" media="all">
 	<link rel="stylesheet" href="assets/diagram.css">
   <script src="assets/jquery.min.js"></script>
   <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
   <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script src="assets/jQueryRotateCompressed.2.2.js" type="text/javascript"></script>
-	<script src="https://sendplex.net/client/views/sp/assets/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="https://sendsms.net/client/views/sp/assets/bootstrap/dist/js/bootstrap.min.js"></script>
 </head>
 
 <body>
